@@ -2,7 +2,11 @@ body{
     background-color: aquamarine;
 }
 .kart_1{
-border-radius: 30px;
+   background: url(ressimler/ressim2.jpg);
+    border-radius: 30px;
+    width: 1000px;
+    height: 670px;
+
 }
 .text_1{
     display: inline-block;
@@ -11,14 +15,23 @@ border-radius: 30px;
     border-radius: 25px;
 
 }
+
 .text_2{
-    display: inline;
+    display: inline-block;
     font-size: 30px;
     height: 80px;
     margin-top: 120px;
     margin-left: -749px;
     border-radius: 25px;
-
+    position: absolute
+}
+.text_3{
+    display: inline-block;
+    font-size: 30px;
+    height: 80px;
+    margin-top: 120px;
+    margin-left: -370px;
+    border-radius: 25px;
     position: absolute
 
 }
@@ -32,7 +45,7 @@ border-radius: 30px;
     transition: border-radius 0.3s;
 }
 .button_2{
-    position: absolute;
+    position: fixed;
     width: 120px;
     height: 80px;
     margin-top: -400px;
@@ -41,7 +54,7 @@ border-radius: 30px;
     transition: border-radius 0.3s;
 }
 .button_3{
-    position: absolute;
+    position: fixed;
     width: 120px;
     height: 80px;
     margin-top: -300px;
@@ -79,9 +92,14 @@ border-radius: 30px;
 
 .yazı_3{
     position: absolute;
-    margin-left: 1100px;
+    margin-left: 1050px;
     margin-top: -230px;
     font-size: 80px;
 }
-
+.yazı_4{
+position: absolute;
+    font-size: 80px;
+    margin-top: -500px;
+    margin-left: 1200px;
+}
 
