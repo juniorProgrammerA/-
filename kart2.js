@@ -1,16 +1,38 @@
-let liste_1 = `    <center>
-<div class="kart_1"></div>
+let liste_1 = `
+<div class="div3">
+
+<div class="kart_1"></div> <div class="div">   
+<div class="div2"><span class="span2">Kredi Kartı Bilgileriniz</span></div>
 <form>
-    <input type="text" maxlength="22" class="text_1" id="id_1" placeholder="Kart No">
-    <input type="text" class="text_1" id="id_2" placeholder="Ad Soyad">
-    <input type="text" maxlength="10" class="text_2" id="id_3" placeholder="Gün/Ay/Yıl">
-    <input type="text" class="text_3" id="id_4" placeholder="CVV">
+<div class="mb-3">
+  <label for="formGroupExampleInput" class="form-label"><span class="span1">İsim Soyisim</span></label>
+  <input type="text" class="form-control" id="id_2" placeholder="ismizi ve soy isminizi giriniz">
+</div>
+<div class="mb-3">
+  <label for="formGroupExampleInput2" class="form-label"><span class="span1">Kart numarası</span></label>
+  <input type="text" class="form-control" id="id_1" placeholder="Kart numaranızı giriniz" maxlength="22">
+</div>
+<div class="mb-3 in">
+  <label for="formGroupExampleInput2" class="form-label "><span class="span1">Son Kullnma Tarihi</span></label>
+  <input type="text" class="form-control" id="id_3" placeholder="Son Kullnma Tarihini giriniz" maxlength="10">
+</div>
+<div class="mb-3 in">
+  <label for="formGroupExampleInput2" class="form-label "><span class="span1">CVV</span></label>
+  <input type="text" class="form-control" id="id_4" placeholder="CVV'yi giriniz" maxlength="3">
+</div>
+<div class="d-grid gap-2">
+  <button class="btn btn-primary" type="button">ÖDE</button>
+</div>
 </form>
-</center>
+</div>
 <span id="gönder_1" class="yazı_1"></span>
 <span id="gönder_2" class="yazı_2"></span>
 <span id="gönder_3" class="yazı_3"></span>
 <span id="gönder_4" class="yazı_4"></span>
+<span id="gönder_4" class="yazı_5"></span>
+
+
+</div>
 `
 
 
@@ -29,7 +51,7 @@ for(let i=0;i<yazı50.length;i++){
 document.getElementById(yazı50[i].name1).addEventListener("keyup", function (ben) {
     let no = ben.target.value;
     let A1 = document.getElementById(yazı50[0].name1).value;
-
+    let A2 = document.getElementById(yazı50[3].name1).value;
     if (no.length == 4) {
         document.getElementById(yazı50[0].name1).value= A1+ "  ";
     }
@@ -58,6 +80,15 @@ for(let i=0;i<yazı51.length;i++){
 
     document.getElementById("id_4").addEventListener("click", function() {
         document.querySelector(".kart_1").style.background = "url(ressimler/ressim3.jpg)";
+        document.querySelector(".kart_1").style.backgroundSize = "cover";
+        document.querySelector(yazı51[i].name1).style.display = "none";
+        document.querySelector(".yazı_4").style.display = "block";
+    
+    });
+
+    document.getElementById("id_4").addEventListener("focus", function() {
+        document.querySelector(".kart_1").style.background = "url(ressimler/ressim3.jpg)";
+        document.querySelector(".kart_1").style.backgroundSize = "cover";
         document.querySelector(yazı51[i].name1).style.display = "none";
         document.querySelector(".yazı_4").style.display = "block";
     
@@ -65,6 +96,7 @@ for(let i=0;i<yazı51.length;i++){
 
     document.getElementById(yazı50[i].name1).addEventListener("click", function() {
         document.querySelector(".kart_1").style.background = "url(ressimler/ressim2.jpg)";
+        document.querySelector(".kart_1").style.backgroundSize = "cover";
         document.querySelector(".yazı_1").style.display = "block";
         document.querySelector(".yazı_2").style.display = "block";
         document.querySelector(".yazı_3").style.display = "block";
